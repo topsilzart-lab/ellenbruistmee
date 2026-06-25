@@ -20,11 +20,11 @@ import {
   Award
 } from 'lucide-react';
 
-import heroImage from './assets/hero.png';
-import ellenOver1Image from './assets/ellen-over-1.jpg';
-import ellenOver2Image from './assets/ellen-over-2.jpg';
-import logoImage from './assets/logo.jpg';
-import ellenContactImage from './assets/ellen-contact.jpg';
+import heroImage from './assets/hero.webp';
+import ellenOver1Image from './assets/ellen-over-1.webp';
+import ellenOver2Image from './assets/ellen-over-2.webp';
+import logoImage from './assets/logo.webp';
+import ellenContactImage from './assets/ellen-contact.webp';
 import { 
   HERO_QUOTES, 
   TARGET_GROUPS, 
@@ -1319,7 +1319,7 @@ export default function App() {
       </section>
 
       {/* H. EERDERE PROJECTEN */}
-      <section id="projecten" className={`relative py-24 md:py-32 px-6 md:px-12 transition-colors duration-500 overflow-hidden ${prikkelArm ? 'bg-[#FEF9E7] text-brand-aubergine' : 'bg-brand-yellow text-brand-aubergine'}`}>
+      <section id="projecten" className={`relative py-24 md:py-32 px-6 md:px-12 transition-colors duration-500 overflow-hidden ${prikkelArm ? 'bg-[#FEF9E7] text-brand-aubergine' : 'bg-brand-turquoise text-brand-aubergine'}`}>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="gsap-reveal text-center max-w-3xl mx-auto mb-20">
             <span className={`text-xs md:text-sm font-bold uppercase tracking-widest block mb-3 ${prikkelArm ? 'text-brand-aubergine/70' : 'text-brand-orange'}`}>Projecten</span>
@@ -1405,7 +1405,7 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
                 <span className={`font-serif text-7xl leading-none select-none absolute top-4 left-6 ${prikkelArm ? 'text-brand-aubergine/10' : 'text-brand-yellow/20'}`}>“</span>
                 
                 <div className="relative z-10 pt-4">
-                  <p className="text-xl sm:text-2xl font-bold leading-relaxed mb-8 font-serif italic">
+                  <p className="text-xl sm:text-2xl font-normal leading-relaxed mb-8 font-sans">
                     {TESTIMONIALS[activeTestimonial].quote}
                   </p>
                   

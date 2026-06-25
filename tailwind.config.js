@@ -11,10 +11,10 @@ export default {
           orange: '#fc7423',
           red: '#fc7423',
           turquoise: '#3eb0f0',
-          purple: '#af476f',
+          purple: '#7c3aed',
           yellow: '#fd9b1a',
           yellowDark: '#ea5207', // Donker Oranje
-          green: '#a08c2a',
+          green: '#2db34a',
           cream: '#FFFDF6',
           aubergine: '#1E1625',
         }
