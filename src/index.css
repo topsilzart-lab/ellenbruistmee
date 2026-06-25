@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-aubergine font-sans antialiased overflow-x-hidden selection:bg-brand-yellow/30;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold leading-tight;
+  }
+  
+  /* Focus Indicator for Keyboard Navigators - strictly WCAG compliant */
+  :focus-visible {
+    outline: 4px solid currentColor !important;
+    outline-offset: 4px !important;
+    border-radius: 0.5rem !important;
+  }
+}
+
+/* Custom Scrollbar - matching our natural brand tones */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFDF6;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fc7423;
+  border-radius: 6px;
+  border: 3px solid #FFFDF6;
+}
+
+/* Custom styles for magnetic feelings, hovers, and blobs */
+.transition-lift {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-lift:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* 
+  SVG GOOEY EFFECT - Motion Design 
+  Enables elements inside the container to merge smoothly like liquid drops 
+*/
+.gooey-bg {
+  filter: url(#goo);
+}
+
+/* Reduced Motion Vangrail - Overrides ALL transitions and animations instantly */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+  
+  .transition-lift:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .magnetic-button {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .magnetic-button:hover {
+    transform: none !important;
+  }
+
+  .gooey-bg {
+    filter: none !important;
+  }
+}
+
+/* Premium Motion Design Animations & Keyframes */
+@keyframes float-capsule {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
+.animate-float-capsule {
+  animation: float-capsule 7s ease-in-out infinite;
+}
+
+@keyframes orbit-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-orbit-rotate {
+  animation: orbit-rotate 15s linear infinite;
+}
+
+@keyframes orbit-reverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+.animate-orbit-reverse {
+  animation: orbit-reverse 20s linear infinite;
+}
+
+@keyframes blob-float-one {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.15); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+.animate-blob-one {
+  animation: blob-float-one 25s ease-in-out infinite;
+}
+
+@keyframes blob-float-two {
+  0%, 100% { transform: translate(0px, 0px) scale(1.1); }
+  33% { transform: translate(-40px, 30px) scale(0.9); }
+  66% { transform: translate(30px, -20px) scale(1.15); }
+}
+.animate-blob-two {
+  animation: blob-float-two 28s ease-in-out infinite;
+}
+
+@keyframes connection-pulse {
+  0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.45; }
+  50% { transform: scale(1.08) translate(5px, -5px); opacity: 0.85; }
+}
+.animate-connection-pulse {
+  animation: connection-pulse 4s ease-in-out infinite;
+}
+
+@keyframes dynamic-box-rotate {
+  0% { transform: rotate3d(1, 1, 1, 0deg); }
+  100% { transform: rotate3d(1, 1, 1, 360deg); }
+}
+.animate-box-rotate {
+  animation: dynamic-box-rotate 25s linear infinite;
+}
+
+@keyframes bubble-rise-card {
+  0% { transform: translateY(40px) scale(0); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-60px) scale(1); opacity: 0; }
+}
+.animate-bubble-rise-card {
+  animation: bubble-rise-card 4s ease-out infinite;
+}
+
