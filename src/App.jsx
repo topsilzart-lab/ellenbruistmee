@@ -784,6 +784,14 @@ export default function App() {
     setTabTimerKey(prev => prev + 1);
   };
 
+  // Fail-safe: never let the intro loader hang (e.g. on some tablets the
+  // canvas transition can stall) — always finish it after a max duration.
+  useEffect(() => {
+    if (!loading) return;
+    const maxWait = setTimeout(() => setLoading(false), 4500);
+    return () => clearTimeout(maxWait);
+  }, [loading]);
+
   useEffect(() => {
     if (loading) return;
     const interval = setInterval(() => {
@@ -886,15 +894,31 @@ export default function App() {
     }
     const ctx = gsap.context(() => {
       gsap.from('.hero-reveal', { y: 40, opacity: 0, duration: 1.2, stagger: 0.08, ease: 'power3.out', delay: 0.1 });
-      
-      document.querySelectorAll('.gsap-reveal').forEach((el) => {
-        gsap.from(el, {
-          scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-          y: 45, opacity: 0, duration: 1, ease: 'power3.out'
-        });
+
+      // Content stays visible by default (CSS). We only briefly hide + reveal
+      // a block at the moment it scrolls into view. If a trigger never fires
+      // (slow images, odd viewport), the element simply stays visible — so a
+      // section can never end up as an empty coloured block.
+      ScrollTrigger.batch('.gsap-reveal', {
+        start: 'top 92%',
+        onEnter: (els) => gsap.from(els, {
+          opacity: 0, y: 45, duration: 0.9, stagger: 0.08, ease: 'power3.out', overwrite: true
+        }),
       });
     }, appRef);
-    return () => ctx.revert();
+
+    // Recalculate ScrollTrigger positions once images/layout settle.
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener('load', refresh);
+    const t1 = setTimeout(refresh, 400);
+    const t2 = setTimeout(refresh, 1500);
+
+    return () => {
+      window.removeEventListener('load', refresh);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      ctx.revert();
+    };
   }, [prikkelArm, loading]);
 
   return (
