@@ -94,8 +94,8 @@ export const HOW_WE_WORK = [
 
 export const CONTACT_INFO = {
   email: 'info@ellenbruistmee.nl',
-  phone: '+31 6 12345678',
-  workArea: 'Midden-Nederland & online'
+  phone: '+31 6 36321010',
+  workArea: 'Noord-, en Midden Limburg'
 };
 
 // ==========================================
@@ -107,6 +107,13 @@ export const ALL_PROJECTS = [
     title: 'Buitenschoolse activiteiten Blerick',
     category: 'Buitenschools',
     desc: 'Mede opzetten en uitvoeren van tweewekelijkse structurele buitenschoolse activiteiten in een achterstandswijk met veel verschillende nationaliteiten. In samenwerking met en door de wijkbewoners; soort voorloper padXpress (BS De Regenboog Blerick t/m 2000).',
+    color: 'border-brand-orange/20 hover:border-brand-orange text-brand-aubergine',
+    badgeBg: 'bg-brand-orange/10 text-brand-orange'
+  },
+  {
+    title: 'Deelnemer Rijke Schooldag',
+    category: 'Buitenschools',
+    desc: 'Als Nederlandse vriendin van het Afrikaanse meisje Ashia (Stichting Aisha & friends). Ondersteunen workshops. Stimuleren online uitwisselingen tussen scholen. Doel: Kinderen hier en in Afrika helpen groeien met life skills. Zodat hun sociale vaardigheden en zelfvertrouwen groeien. (Talenten Campus Venlo juni ’26).',
     color: 'border-brand-orange/20 hover:border-brand-orange text-brand-aubergine',
     badgeBg: 'bg-brand-orange/10 text-brand-orange'
   },
@@ -138,14 +145,14 @@ export const ALL_PROJECTS = [
   {
     title: 'Presenteren Onderwijsdag & Cabaret',
     category: 'Cultuur',
-    desc: 'Presenteren Onderwijsdag in de Maaspoort (2x) + cabarettour pabo.',
+    desc: 'Presenteren Onderwijsdag in de Maaspoort (2x) + cabarettour pabo (’90-’91).',
     color: 'border-brand-purple/20 hover:border-brand-purple text-brand-aubergine',
     badgeBg: 'bg-brand-purple/10 text-brand-purple'
   },
   {
-    title: 'Projectleiderschap Wereld Paviljoen',
+    title: 'Projectleiderschap Wereldpaviljoen',
     category: 'Cultuur',
-    desc: `Projectleiderschap Wereld Paviljoen tijdens de Floriade 2012
+    desc: `Projectleiderschap Wereldpaviljoen tijdens de Floriade 2012
 -aansturen vrijwilligers plus studenten van Fontys Hogeschool
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
@@ -173,7 +180,7 @@ export const ALL_PROJECTS = [
     title: 'Natuuronderwijs Zelfontdekkend Leren',
     category: 'Onderwijs',
     desc: `Natuuronderwijs maar dan anders! Zelfontdekkend leren (opzet en uitvoer)
--OB kabouterpad met doe-opdrachten, MB ontdekhoeken + leskist natuurkunde, BB veldwerk + leskist. Deelnemer opendorp dag met de kids in actie (BS Aan den Mortel Meijel).`,
+-OB kabouterpad met doe-opdrachten, MB ontdekhoeken + leskist natuurkunde, BB veldwerk + leskist. Deelnemer opendorp dag met de kids in actie (BS Aen den Mortel Meijel ’90-’91).`,
     color: 'border-brand-green/20 hover:border-brand-green text-brand-aubergine',
     badgeBg: 'bg-brand-green/10 text-brand-green'
   },
@@ -239,7 +246,7 @@ export const ALL_PROJECTS = [
     category: 'Onderwijs',
     desc: `Opzet bevorderen automatiseren vanaf groep 4 t/m 8. Middels inzet van dagelijkse structurele korte trainingsmomentjes. Klassikaal/in groepjes, zelfstandig werkmaterialen maken, verzamelen en inzetten. Spellencircuit inzetten. Bewegend leren ingevoerd.
 
-Persoonlijke tafeltjeskaart en centrale tafeltjes groeiwand aangebracht bij zowel de MB als bij de BB (BS De Zuidstroom Venlo/Zoveel mogelijk altijd overal).`,
+Persoonlijke tafeltjeskaart en centrale tafeltjes groeiwand aangebracht bij zowel de MB als bij de BB (BS De Zuidstroom Venlo ’16-’17/Zoveel mogelijk altijd overal).`,
     color: 'border-brand-green/20 hover:border-brand-green text-brand-aubergine',
     badgeBg: 'bg-brand-green/10 text-brand-green'
   },
@@ -255,28 +262,28 @@ Persoonlijke tafeltjeskaart en centrale tafeltjes groeiwand aangebracht bij zowe
   {
     title: 'Project Plastic Fantastic',
     category: 'Diverse cultuur-educatie projecten',
-    desc: 'Project Plastic Fantastic. Duurzaamheidsthema. Dieren maken van plastic verpakkingsmaterialen (BS De Meulebeek Oostrum)',
+    desc: 'Project Plastic Fantastic. Duurzaamheidsthema. Dieren maken van plastic verpakkingsmaterialen (BS De Meulebeek Oostrum ’21-’22)',
     color: 'border-brand-turquoise/20 hover:border-brand-turquoise text-brand-aubergine',
     badgeBg: 'bg-brand-turquoise/10 text-brand-turquoise'
   },
   {
     title: 'Project Steentijd',
     category: 'Diverse cultuur-educatie projecten',
-    desc: 'Project Steentijd. o.a. Zelf gebruiksvoorwerpen maken, rotstekeningen maken van gevonden materialen uit de natuur, weefwerk van riet maken, kleding maken (BS St. Martinus Venlo).',
+    desc: 'Project Steentijd. o.a. Zelf gebruiksvoorwerpen maken, rotstekeningen maken van gevonden materialen uit de natuur, weefwerk van riet maken, kleding maken (BS St. Martinus Venlo ’22-’23).',
     color: 'border-brand-turquoise/20 hover:border-brand-turquoise text-brand-aubergine',
     badgeBg: 'bg-brand-turquoise/10 text-brand-turquoise'
   },
   {
     title: 'Project Paddenstoelen',
     category: 'Diverse cultuur-educatie projecten',
-    desc: 'Project paddenstoelen. o.a. Zoeken, determineren, natekenen, sporen eruit filteren, schimmels en functie, champignons kweken in de klas en braden (BS Aen den Mortel Meijel/BS St. Martinus Venlo).',
+    desc: 'Project paddenstoelen. o.a. Zoeken, determineren, natekenen, sporen eruit filteren, schimmels en functie, champignons kweken in de klas en braden (BS Aen den Mortel Meijel ’91/BS St. Martinus Venlo ’22-’23).',
     color: 'border-brand-turquoise/20 hover:border-brand-turquoise text-brand-aubergine',
     badgeBg: 'bg-brand-turquoise/10 text-brand-turquoise'
   },
   {
     title: 'Project Middeleeuwen',
     category: 'Diverse cultuur-educatie projecten',
-    desc: 'Project Middeleeuwen. o.a. Kalligraferen, pen maken en ermee werken, initiaal creëren, Bordspel Limburgs Museum + bezoeken, spreekbeurt eraan koppelen (BS St. Martinus Venlo).',
+    desc: 'Project Middeleeuwen. o.a. Kalligraferen, pen maken en ermee werken, initiaal creëren, Bordspel Limburgs Museum + bezoeken, spreekbeurt eraan koppelen (BS St. Martinus Venlo ’22-’23).',
     color: 'border-brand-turquoise/20 hover:border-brand-turquoise text-brand-aubergine',
     badgeBg: 'bg-brand-turquoise/10 text-brand-turquoise'
   },
@@ -284,7 +291,7 @@ Persoonlijke tafeltjeskaart en centrale tafeltjes groeiwand aangebracht bij zowe
     title: 'Kerst voor iedereen / Kerst in de toekomst',
     category: 'Diverse cultuur-educatie projecten',
     desc: `Kerst voor iedereen/Kerst in de toekomst; mondiaal bewustzijn voeden. Spelvorm met diverse nationaliteiten in verschillende cultuurdisciplines.
-Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het zittende publiek draait mee. Werkgroepen waren de verhalenschrijver (binnen thema’s), decorbouwers, pamfletontwerpers, poppenmakers, schimmenmakers, presentatoren, vertellers, de technici, de digitale-groep, de muzikanten. Kids van alle nationaliteiten komen in spelvorm met hun gemaakte landsvlag aan het woord om over hun gebruiken tijdens “Kerst of Nieuwjaarsbeleving” te vertellen (BS St. Martinus Venlo).`,
+Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het zittende publiek draait mee. Werkgroepen waren de verhalenschrijver (binnen thema’s), decorbouwers, pamfletontwerpers, poppenmakers, schimmenmakers, presentatoren, vertellers, de technici, de digitale-groep, de muzikanten. Kids van alle nationaliteiten komen in spelvorm met hun gemaakte landsvlag aan het woord om over hun gebruiken tijdens “Kerst of Nieuwjaarsbeleving” te vertellen (BS St. Martinus Venlo ’22-’23).`,
     color: 'border-brand-turquoise/20 hover:border-brand-turquoise text-brand-aubergine',
     badgeBg: 'bg-brand-turquoise/10 text-brand-turquoise'
   }
@@ -302,11 +309,11 @@ Karakteristiek voor haar is, dat zij zich enorm in wil zetten voor “nieuwe” 
 
 -Zij heeft de organisatie van “zij-instromers” verder uitgewerkt, i.s.m. het BCO en in overleg met de toeleveringsscholen.
 
--Haar hart ligt zeker ook bij de leerling die die wat extra’s nodig heeft. Ellen pakte de RT-ondersteuning met ziel en zaligheid op.
+-Haar hart ligt zeker ook bij de leerling die wat extra’s nodig heeft. Ellen pakte de RT-ondersteuning met ziel en zaligheid op.
 
 -Ellen was een méér dan dragende kracht bij de ontwikkeling van OGO en Thematisch Onderwijs op de Regenboog.`,
     author: "Peter Janssen",
-    role: "Adjunct-directeur van bs. De Regenboog te Venlo-Blerick (periode 1991-2000) | p.janssen@hazenkamp.kerobei.nl (per mei 2015)"
+    role: "Adjunct-directeur van bs. De Regenboog te Venlo-Blerick (periode 1991-2000) | Blerick, mei 2015"
   },
   {
     quote: `Ellen, een energieke enthousiaste en vooral creatieve dame die graag voor de troepen uitloopt met haar originaliteit.
@@ -319,7 +326,7 @@ Zij levert bouwstenen voor projecten die gericht zijn op het verbeteren van het 
 
 En zich daarbij vooral inzet om eenieder zelf hun talenten te laten ontdekken.`,
     author: "Ton Dols",
-    role: "Directeur van bs. de Regenboog te Venlo-Blerick (periode 1991-2000) & Bestuurslid Wereld Paviljoen Floriade 2012"
+    role: "Directeur van bs. de Regenboog te Venlo-Blerick (periode 1991-2000) & Bestuurslid Wereldpaviljoen Floriade 2012 | Maasbree, juni 2026"
   },
   {
     quote: `De Stichting Wereldpaviljoen besloot om tijdens de Wereldtuinbouwtentoonstelling Floriade (2012) in Venlo een educatieve inzending te maken met als doel bezoekers (kinderen en volwassenen) kennis te laten maken met andere culturen.

@@ -796,7 +796,7 @@ export default function App() {
     if (loading) return;
     const interval = setInterval(() => {
       triggerTabChange((activeTab + 1) % 3);
-    }, 10000);
+    }, 20000);
     return () => clearInterval(interval);
   }, [loading, activeTab, tabTimerKey, triggerTabChange]);
 
@@ -1132,7 +1132,7 @@ export default function App() {
       </section>
 
       {/* C. VOOR WIE */}
-      <section id="voor-wie" className={`relative py-24 md:py-32 px-6 md:px-12 transition-colors duration-500 overflow-hidden ${prikkelArm ? 'bg-[#FDF2ED] text-brand-aubergine' : 'bg-brand-orange text-brand-cream'}`}>
+      <section id="voor-wie" className={`relative py-24 md:py-32 px-6 md:px-12 transition-colors duration-500 overflow-hidden ${prikkelArm ? 'bg-[#FDF2ED] text-brand-aubergine' : 'bg-[#DA291C] text-brand-cream'}`}>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="gsap-reveal text-center max-w-3xl mx-auto mb-20">
             <span className={`text-xs md:text-sm font-bold uppercase tracking-widest block mb-3 ${prikkelArm ? 'text-brand-aubergine/70' : 'text-brand-yellow/90'}`}>De doelgroep</span>
@@ -1356,19 +1356,19 @@ export default function App() {
               {
                 title: 'Kerst voor iedereen / Kerst in de toekomst',
                 desc: `Kerst voor iedereen/Kerst in de toekomst; mondiaal bewustzijn voeden. Spelvorm met diverse nationaliteiten in verschillende cultuurdisciplines.
-Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het zittende publiek draait mee. Werkgroepen waren de verhalenschrijver (binnen thema’s), decorbouwers, pamfletontwerpers, poppenmakers, schimmenmakers, presentatoren, vertellers, de technici, de digitale-groep, de muzikanten. Kids van alle nationaliteiten komen in spelvorm met hun gemaakte landsvlag aan het woord om over hun gebruiken tijdens “Kerst of Nieuwjaarsbeleving” te vertellen (BS St. Martinus Venlo).`
+Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het zittende publiek draait mee. Werkgroepen waren de verhalenschrijver (binnen thema’s), decorbouwers, pamfletontwerpers, poppenmakers, schimmenmakers, presentatoren, vertellers, de technici, de digitale-groep, de muzikanten. Kids van alle nationaliteiten komen in spelvorm met hun gemaakte landsvlag aan het woord om over hun gebruiken tijdens “Kerst of Nieuwjaarsbeleving” te vertellen (BS St. Martinus Venlo ’22-’23).`
               },
               {
                 title: 'Project Plastic Fantastic',
-                desc: 'Project Plastic Fantastic. Duurzaamheidsthema. Dieren maken van plastic verpakkingsmaterialen (BS De Meulebeek Oostrum)'
+                desc: 'Project Plastic Fantastic. Duurzaamheidsthema. Dieren maken van plastic verpakkingsmaterialen (BS De Meulebeek Oostrum ’21-’22)'
               },
               {
                 title: 'Peergroepen Meer- & Hoogbegaafd',
                 desc: 'Mede opzetten en draaien van peergroupen voor de Meer en Hoog Begaafde kinderen in de midden-, en bovenbouw. Doel: Uitdaging voor de peers + een meerwaarde voor de stamgroep. Zodat de peerkids hun eindresultaat kunnen presenteren in hun stamgroep (de peerouders zijn altijd van de partij). Thema’s waar ik mee gewerkt heb: Het heelal/natuurkundige verschijnselen (proefjes met door henzelf gemaakt instructieblad), duurzaamheid /milieu (bedenk, ontwerp, beschrijf, teken en voer uit met kosteloze materialen), planten/geschiedenis (een reis door de tijd; samen een boek maken voor iedere stamgroep), democratie/regering (voorstel indienen bij leerlingenraad en onderbouwen), vroeger & nu/religies (lapbook maken), vrijheid (interview maken, uitvoeren en uitwerken + collega: “Wat is vrijheid voor jou?”) (OJBS De Omnibus Baarlo ’23-‘25).'
               },
               {
-                title: 'Projectleiderschap Wereld Paviljoen',
-                desc: `Projectleiderschap Wereld Paviljoen tijdens de Floriade 2012
+                title: 'Projectleiderschap Wereldpaviljoen',
+                desc: `Projectleiderschap Wereldpaviljoen tijdens de Floriade 2012
 -aansturen vrijwilligers plus studenten van Fontys Hogeschool
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
@@ -1576,9 +1576,10 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
               <span className="font-display text-3xl font-bold tracking-tight block">
                 Ellen <span className="text-brand-orange">BRUIST</span> mee
               </span>
-              <p className="text-brand-cream/70 max-w-md text-base leading-relaxed">
-                creatief onderwijsspecialist in talentontwikkeling en maatwerk<br />
-                Ouderbetrokkenheid stimuleren
+              <p className="text-brand-cream/70 max-w-md text-base leading-relaxed flex items-start gap-2">
+                <Sparkles className="h-4 w-4 text-brand-yellow shrink-0 mt-1" />
+                <span>Creatief onderwijsspecialist in talentontwikkeling en maatwerk<br />
+                Ouderbetrokkenheid stimuleren</span>
               </p>
               <div className="flex items-center gap-3">
                 <span className="relative flex h-3.5 w-3.5">
@@ -1606,7 +1607,7 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
                     }}
                     className="hover:text-brand-yellow transition-colors duration-200 text-left block w-full focus:outline-none font-semibold"
                   >
-                    Bekijk alle 24 projecten
+                    Bekijk alle {ALL_PROJECTS.length} projecten
                   </button>
                 </li>
               </ul>
@@ -1625,7 +1626,7 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
             <span className="font-serif italic text-3xl font-extrabold tracking-wide text-brand-orange">IK ZEG DOEN!</span>
             <div className="text-sm opacity-60 text-center md:text-right">
               <p>&copy; {new Date().getFullYear()} Ellen BRUIST mee · {CONTACT_INFO.email}</p>
-              <p className="mt-1 font-medium text-brand-yellow">creatief onderwijsspecialist in talentontwikkeling en maatwerk</p>
+              <p className="mt-1 font-medium text-brand-yellow">Creatief onderwijsspecialist in talentontwikkeling en maatwerk</p>
             </div>
           </div>
         </div>
