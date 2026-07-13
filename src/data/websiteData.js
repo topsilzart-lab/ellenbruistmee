@@ -93,7 +93,7 @@ export const HOW_WE_WORK = [
 ];
 
 export const CONTACT_INFO = {
-  email: 'info@ellenbruistmee.nl',
+  email: 'ellen@ellenbruistmee.nl',
   phone: '+31 6 36321010',
   workArea: 'Noord-, en Midden Limburg'
 };

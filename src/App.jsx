@@ -807,7 +807,18 @@ export default function App() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) setFormSubmitted(true);
+    if (!(formData.name && formData.email && formData.message)) return;
+    const encode = (data) =>
+      Object.keys(data).map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k])).join('&');
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...formData }),
+    })
+      .then(() => setFormSubmitted(true))
+      .catch(() => {
+        window.alert(`Verzenden lukte niet. Mail gerust direct naar ${CONTACT_INFO.email}`);
+      });
   };
 
   // GSAP animations
@@ -1440,7 +1451,8 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
                   <button onClick={() => setFormSubmitted(false)} className={`px-6 py-3 rounded-full border text-sm font-bold transition-all duration-300 active:scale-95 ${prikkelArm ? 'border-brand-aubergine/20 hover:border-brand-aubergine text-brand-aubergine' : 'border-brand-orange/30 hover:border-brand-orange text-brand-orange hover:bg-brand-orange/5'}`}>Nieuw bericht sturen</button>
                 </div>
               ) : (
-                <form onSubmit={handleFormSubmit} className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" onSubmit={handleFormSubmit} className="space-y-6">
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="name" className="font-semibold text-sm">Naam</label>
@@ -1602,7 +1614,7 @@ function SkillsModal({ prikkelArm, onClose }) {
     {
       title: 'DE DENKER',
       subtitle: 'ik begrijp het!',
-      desc: 'Dringt door tot de kern van de zaken. Bedenkt creatieve oplossingen voor complexe vraagstukken (out of the box denker), ongebonden geest, kan goed relativeren, bedachtzaam, sterk intuïtief maar niet zweverig (doortastendheid), helicopterview.',
+      desc: 'Dringt door tot de kern van de zaken. Bedenkt creatieve oplossingen voor complexe vraagstukken (out of the box denker), ongebonden geest, kan goed relativeren, bedachtzaam, sterk intuïtief maar niet zweverig (doortastendheid), helikopterview.',
       icon: <Brain className="h-6 w-6" />,
       colorBg: 'bg-brand-turquoise/10 text-brand-turquoise',
       borderCol: 'border-brand-turquoise/20 hover:border-brand-turquoise'
