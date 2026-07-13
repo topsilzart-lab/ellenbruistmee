@@ -1523,11 +1523,16 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
               <span className="font-display text-3xl font-bold tracking-tight block">
                 Ellen <span className="text-brand-orange">BRUIST</span> mee
               </span>
-              <p className="text-brand-cream/70 max-w-md text-base leading-relaxed flex items-start gap-2">
-                <Sparkles className="h-4 w-4 text-brand-yellow shrink-0 mt-1" />
-                <span>Creatief onderwijsspecialist in talentontwikkeling en maatwerk<br />
-                Ouderbetrokkenheid stimuleren</span>
-              </p>
+              <div className="text-brand-cream/70 max-w-md text-base leading-relaxed space-y-1">
+                <p className="flex items-start gap-2">
+                  <Sparkles className="h-4 w-4 text-brand-yellow shrink-0 mt-1" />
+                  <span>Creatief onderwijsspecialist in talentontwikkeling en maatwerk</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <Sparkles className="h-4 w-4 text-brand-yellow shrink-0 mt-1" />
+                  <span>Ouderbetrokkenheid stimuleren</span>
+                </p>
+              </div>
               <div className="flex items-center gap-3">
                 <span className="relative flex h-3.5 w-3.5">
                   <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${prikkelArm ? 'bg-brand-green/80' : 'bg-brand-yellow/80'}`}></span>

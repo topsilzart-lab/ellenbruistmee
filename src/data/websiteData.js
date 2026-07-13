@@ -383,6 +383,6 @@ Ik weet zeker dat zij vanuit haar visie en vaardigheden van betekenis zal zijn i
 
 Ik raad het iedereen aan die klaar is met gebaande paden; loop, vlieg, ren, spring of huppel met Ellen mee over de nog ongebaande paden!`,
     author: "Sandra Bertrand",
-    role: "Waarnemend directeur bij OJBS De Omnibus Baarlo (periode mei '23 - juli '24) | Wilhelminastraat 3a, 5975 CK, Sevenum"
+    role: "Waarnemend directeur bij OJBS De Omnibus Baarlo (periode mei '23 - juli '24) | Directeur OJ BS De Krullevaar Sevenum"
   }
 ];
