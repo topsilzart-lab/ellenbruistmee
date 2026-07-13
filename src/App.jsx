@@ -942,7 +942,7 @@ export default function App() {
       
       {/* A. NAVBAR */}
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-[1360px]">
-        <nav className={`w-full px-6 py-3.5 md:py-4 rounded-full flex items-center justify-between transition-all duration-500 border ${
+        <nav className={`w-full px-4 md:px-6 py-3.5 md:py-4 rounded-full flex items-center justify-between gap-2 transition-all duration-500 border ${
           scrolled
             ? prikkelArm
               ? 'bg-[#FAF8F5]/90 border-brand-aubergine/10 shadow-sm backdrop-blur-xl'
@@ -985,8 +985,7 @@ export default function App() {
               aria-pressed={prikkelArm} aria-label="Schakel prikkelarme modus in"
             >
               <Eye className="h-4 w-4 shrink-0" />
-              <span className="hidden sm:inline">{prikkelArm ? 'Bruisen ✨' : 'Prikkelarm 🕊️'}</span>
-              <span className="sm:hidden">{prikkelArm ? 'Bruisen' : 'Prikkelarm'}</span>
+              <span className="hidden md:inline">{prikkelArm ? 'Bruisen ✨' : 'Prikkelarm 🕊️'}</span>
             </button>
             <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className={`hidden sm:inline-flex items-center justify-center px-4 py-2.5 xl:px-5 xl:py-2.5 rounded-full font-bold transition-all duration-300 active:scale-95 border whitespace-nowrap shrink-0 ${
               prikkelArm ? 'bg-brand-aubergine border-brand-aubergine text-[#FAF8F5] hover:bg-brand-aubergine/80'
@@ -1372,13 +1371,21 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
 -aansturen vrijwilligers plus studenten van Fontys Hogeschool
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
--de slotavond voor de vrijwilligers mede organiseren en presenteren. Een plek voor en met wereldburgers.`
+-de slotavond voor de vrijwilligers mede organiseren en presenteren. Een plek voor en met wereldburgers.`,
+                link: 'https://www.youtube.com/watch?v=aabupxac25k',
+                linkLabel: 'Bekijk de video'
               }
             ].map((p, i) => (
               <div key={i} className={`gsap-reveal p-8 rounded-[2rem] border transition-lift flex flex-col justify-between ${prikkelArm ? 'bg-[#FAF8F5] border-brand-aubergine/10 text-brand-aubergine' : 'bg-[#FFFDF6] border-brand-orange/15 shadow-lg'}`}>
                 <div>
                   <h3 className="text-2xl font-bold font-display mb-4 text-brand-aubergine">{p.title}</h3>
                   <p className="leading-relaxed text-base md:text-lg text-brand-aubergine/80 whitespace-pre-line">{p.desc}</p>
+                  {p.link && (
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-4 font-bold text-sm text-brand-orange hover:text-brand-turquoise transition-colors">
+                      {p.linkLabel || 'Bekijk link'}
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -1627,6 +1634,9 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
             <div className="text-sm opacity-60 text-center md:text-right">
               <p>&copy; {new Date().getFullYear()} Ellen BRUIST mee · {CONTACT_INFO.email}</p>
               <p className="mt-1 font-medium text-brand-yellow">Creatief onderwijsspecialist in talentontwikkeling en maatwerk</p>
+              <p className="mt-3">Foto's door: <a href="https://jolaisa.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-yellow transition-colors">Jolaisa Photography</a></p>
+              {/* Digital Shiru: link volgt later */}
+              <p>Website by: Digital Shiru</p>
             </div>
           </div>
         </div>
@@ -1895,6 +1905,12 @@ function ProjectsView({ prikkelArm, setCurrentPage }) {
                 <p className="leading-relaxed text-base md:text-lg text-brand-aubergine/80 whitespace-pre-line">
                   {p.desc}
                 </p>
+                {p.link && (
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-1.5 mt-5 font-bold text-sm transition-colors ${prikkelArm ? 'text-brand-aubergine hover:text-brand-aubergine/70' : 'text-brand-orange hover:text-brand-turquoise'}`}>
+                    {p.linkLabel || 'Bekijk link'}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
               </div>
             </div>
           ))}

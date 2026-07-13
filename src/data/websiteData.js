@@ -53,21 +53,21 @@ export const TARGET_GROUPS = [
 export const MY_APPROACH = [
   {
     title: 'Kijken wat WEL kan',
-    desc: '- ik kijk graag naar wat iemand uniek maakt en hoe dat talent kan groeien (=de intrinsieke motivatie). Eigenaarschap stimuleren.\n\nKinderen mogen voelen: "He, dit is van mij. Ik kan dit. Ik mag hierin groeien."',
+    desc: '- Ik kijk graag naar wat iemand uniek maakt en hoe dat talent kan groeien (=de intrinsieke motivatie). Eigenaarschap stimuleren.\n\nKinderen mogen voelen: "He, dit is van mij. Ik kan dit. Ik mag hierin groeien."',
     bg: 'bg-brand-cream text-brand-aubergine border-brand-cream/10',
     iconBg: 'bg-brand-red text-brand-cream',
     pBg: 'bg-brand-red/10 text-brand-red'
   },
   {
     title: 'Ouder­betrokkenheid stimuleren',
-    desc: '- écht leren meekijken waar hun kind mee te maken krijgt. Daardoor ontstaat er meer begrip voor hun kind.\n\nEn soms ook nieuwe inzichten over zichzelf.',
+    desc: '- Écht leren meekijken waar hun kind mee te maken krijgt. Daardoor ontstaat er meer begrip voor hun kind.\n\nEn soms ook nieuwe inzichten over zichzelf.',
     bg: 'bg-brand-yellow text-brand-aubergine border-brand-yellow/10',
     iconBg: 'bg-brand-aubergine text-brand-yellow',
     pBg: 'bg-brand-yellowDark/10 text-brand-yellowDark'
   },
   {
     title: 'Out of the box DOEN',
-    desc: '• Op een zo breed mogelijk vlak\n• Op alle mogelijke creatieve manieren BRUISEN\n\n- bezig zijn met zich uiten. Met het ervaren vanuit hun eigen gevoel (ontdekken, proberen, voelen, creëren én groeien)\n- dit in combinatie met het ontwikkelen van skills die hun eigenheid zoveel mogelijk laat bloeien',
+    desc: '• Op een zo breed mogelijk vlak\n• Op alle mogelijke creatieve manieren BRUISEN\n\n- Bezig zijn met zich uiten. Met het ervaren vanuit hun eigen gevoel (ontdekken, proberen, voelen, creëren én groeien)\n- Dit in combinatie met het ontwikkelen van skills die hun eigenheid zoveel mogelijk laat bloeien',
     bg: 'bg-brand-green text-brand-aubergine border-brand-green/10',
     iconBg: 'bg-brand-cream text-brand-green',
     pBg: 'bg-brand-green/10 text-brand-green'
@@ -114,6 +114,8 @@ export const ALL_PROJECTS = [
     title: 'Deelnemer Rijke Schooldag',
     category: 'Buitenschools',
     desc: 'Als Nederlandse vriendin van het Afrikaanse meisje Ashia (Stichting Aisha & friends). Ondersteunen workshops. Stimuleren online uitwisselingen tussen scholen. Doel: Kinderen hier en in Afrika helpen groeien met life skills. Zodat hun sociale vaardigheden en zelfvertrouwen groeien. (Talenten Campus Venlo juni ’26).',
+    link: 'https://aishaandfriends.com',
+    linkLabel: 'aishaandfriends.com',
     color: 'border-brand-orange/20 hover:border-brand-orange text-brand-aubergine',
     badgeBg: 'bg-brand-orange/10 text-brand-orange'
   },
@@ -157,6 +159,8 @@ export const ALL_PROJECTS = [
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
 -de slotavond voor de vrijwilligers mede organiseren en presenteren. Een plek voor en met wereldburgers.`,
+    link: 'https://www.youtube.com/watch?v=aabupxac25k',
+    linkLabel: 'Bekijk de video',
     color: 'border-brand-purple/20 hover:border-brand-purple text-brand-aubergine',
     badgeBg: 'bg-brand-purple/10 text-brand-purple'
   },
