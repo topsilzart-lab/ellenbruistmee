@@ -22,6 +22,20 @@ $FROM       = 'ellen@ellenbruistmee.nl';
 $FROM_NAME  = 'Ellen Bruist mee (website)';
 // ============================================================
 
+// Versie-check: GET ?ping=1 bevestigt welke versie + instellingen live staan
+if (isset($_GET['ping'])) {
+    echo json_encode([
+        'ok'          => true,
+        'version'     => 'smtp-3',
+        'host'        => $SMTP_HOST,
+        'port'        => $SMTP_PORT,
+        'secure'      => $SMTP_SECURE,
+        'user'        => $SMTP_USER,
+        'password_set' => ($SMTP_PASS !== ''),
+    ]);
+    exit;
+}
+
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     http_response_code(405);
     echo json_encode(['ok' => false, 'error' => 'Method not allowed']);
