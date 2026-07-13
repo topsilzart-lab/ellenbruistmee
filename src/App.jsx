@@ -298,78 +298,6 @@ function GlobalLavalampCanvas({ prikkelArm }) {
 function PrikwaterLoader({ onComplete }) {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
-  const [processedLogo, setProcessedLogo] = useState(logoImage);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = logoImage;
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-      try {
-        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imgData.data;
-        const w = canvas.width;
-        const h = canvas.height;
-        const visited = new Uint8Array(w * h);
-        const queue = [];
-
-        // Add border pixels to queue (top/bottom)
-        for (let x = 0; x < w; x++) {
-          queue.push(x, 0);
-          queue.push(x, h - 1);
-          visited[x] = 1;
-          visited[x + (h - 1) * w] = 1;
-        }
-        // Left/right borders
-        for (let y = 1; y < h - 1; y++) {
-          queue.push(0, y);
-          queue.push(w - 1, y);
-          visited[y * w] = 1;
-          visited[(w - 1) + y * w] = 1;
-        }
-
-        let head = 0;
-        while (head < queue.length) {
-          const x = queue[head++];
-          const y = queue[head++];
-          const idx = (x + y * w) * 4;
-          const r = data[idx];
-          const g = data[idx + 1];
-          const b = data[idx + 2];
-
-          // If the pixel is dark background
-          if (r < 40 && g < 40 && b < 40) {
-            data[idx + 3] = 0; // Make transparent
-
-            // Check 4 neighbors
-            const neighbors = [
-              [x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1]
-            ];
-            for (let n = 0; n < neighbors.length; n++) {
-              const nx = neighbors[n][0];
-              const ny = neighbors[n][1];
-              if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
-                const nidx = nx + ny * w;
-                if (!visited[nidx]) {
-                  visited[nidx] = 1;
-                  queue.push(nx, ny);
-                }
-              }
-            }
-          }
-        }
-        ctx.putImageData(imgData, 0, 0);
-        setProcessedLogo(canvas.toDataURL('image/png'));
-      } catch (e) {
-        console.error("Canvas processing failed", e);
-      }
-    };
-  }, []);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -621,7 +549,7 @@ function PrikwaterLoader({ onComplete }) {
       {/* Floating logo and loader text */}
       <div className="relative flex flex-col items-center justify-center pointer-events-none text-center z-10 px-6 max-w-lg">
         <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] mb-4 animate-pulse-slow flex items-center justify-center">
-          <img src={processedLogo} className="w-full h-full object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.35)]" alt="Ellen BRUIST mee Logo" />
+          <img src={logoImage} className="w-full h-full object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.35)]" alt="Ellen BRUIST mee Logo" />
         </div>
         <h2 className="font-display font-black text-4xl sm:text-5xl text-brand-cream tracking-tight mb-2">
           Ellen <span className="text-brand-yellow">Bruist</span> Mee
