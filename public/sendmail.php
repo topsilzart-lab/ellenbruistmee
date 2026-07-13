@@ -4,20 +4,18 @@ ini_set('display_errors', '0');
 header('Content-Type: application/json; charset=utf-8');
 
 // ======================= INSTELLINGEN =======================
-// Standaard: de lokale mailserver op de hosting (geen wachtwoord nodig,
-// omdat ellen@ellenbruistmee.nl een postbus op dezelfde server is).
+// SMTP via mijndomein (de mail van ellenbruistmee.nl loopt via mijndomein).
 //
-// Werkt dit niet? Vraag in Plesk de SMTP-gegevens op en zet dan:
-//   $SMTP_HOST   = 'de mailserver (bv. mail.ellenbruistmee.nl)';
-//   $SMTP_PORT   = 587;          // 587 = TLS, 465 = SSL
-//   $SMTP_SECURE = 'tls';        // 'tls', 'ssl' of '' (geen)
-//   $SMTP_USER   = 'ellen@ellenbruistmee.nl';
-//   $SMTP_PASS   = 'JOUW-MAILBOX-WACHTWOORD';   // vul dit zelf in
-$SMTP_HOST   = 'localhost';
-$SMTP_PORT   = 25;
-$SMTP_SECURE = '';        // '', 'tls' of 'ssl'
-$SMTP_USER   = '';        // leeg = geen authenticatie
-$SMTP_PASS   = '';
+// >>> VUL HIERONDER BIJ $SMTP_PASS HET WACHTWOORD VAN DE MAILBOX
+//     ellen@ellenbruistmee.nl IN (tussen de aanhalingstekens). <<<
+//
+// Werkt 465/SSL niet? Probeer dan poort 587 met TLS:
+//   $SMTP_PORT = 587;  $SMTP_SECURE = 'tls';
+$SMTP_HOST   = 'smtp.mijndomein.nl';
+$SMTP_PORT   = 465;
+$SMTP_SECURE = 'ssl';                       // 465 = 'ssl', 587 = 'tls'
+$SMTP_USER   = 'ellen@ellenbruistmee.nl';
+$SMTP_PASS   = '';                          // <-- WACHTWOORD HIER INVULLEN
 
 $TO        = 'ellen@ellenbruistmee.nl';
 $FROM       = 'ellen@ellenbruistmee.nl';
