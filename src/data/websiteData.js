@@ -159,8 +159,8 @@ export const ALL_PROJECTS = [
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
 -de slotavond voor de vrijwilligers mede organiseren en presenteren. Een plek voor en met wereldburgers.`,
-    link: 'https://www.youtube.com/watch?v=aabupxac25k',
-    linkLabel: 'Bekijk de video',
+    link: 'https://wereldpaviljoen.com/',
+    linkLabel: 'Bekijk de website',
     color: 'border-brand-purple/20 hover:border-brand-purple text-brand-aubergine',
     badgeBg: 'bg-brand-purple/10 text-brand-purple'
   },
@@ -375,7 +375,7 @@ De activiteiten laten zien dat er met enthousiasme, vakmanschap en oog voor iede
 
 Betrokken bij al haar kinderen maar met name bij de kinderen die iets meer, iets anders nodig hadden.
 
-Bijzonder als in uniek: in haar energie, levenslust en optimisme, ondanks dat het niet allemaal liep zoals ik het haar gunde.
+Bijzonder als in uniek: in haar energie, levenslust en optimisme.
 
 Zo mooi om nu te zien dat Ellen de stap heeft gezet, los van alle kaders, om echt voor zichzelf te kiezen.
 

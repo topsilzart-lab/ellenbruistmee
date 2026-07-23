@@ -720,13 +720,7 @@ export default function App() {
     return () => clearTimeout(maxWait);
   }, [loading]);
 
-  useEffect(() => {
-    if (loading) return;
-    const interval = setInterval(() => {
-      triggerTabChange((activeTab + 1) % 3);
-    }, 20000);
-    return () => clearInterval(interval);
-  }, [loading, activeTab, tabTimerKey, triggerTabChange]);
+  // Auto-verspringen van de Aanpak-tabs is uitgeschakeld — bezoekers navigeren alleen handmatig.
 
   const getTabBgClass = () => {
     if (prikkelArm) {
@@ -1045,7 +1039,12 @@ export default function App() {
               <h2 className={`text-4xl md:text-6xl font-display font-extrabold mb-8 leading-tight italic font-serif ${prikkelArm ? 'text-brand-orange' : 'text-brand-aubergine'}`}>"Ik heb nooit in de rij gelopen."</h2>
               <div className={`space-y-6 text-lg leading-relaxed ${prikkelArm ? 'text-brand-aubergine/95' : 'text-brand-aubergine/90'}`}>
                 <p>Ik ben Ellen. Ik heb nooit in de rij gelopen. Wil heel veel ontdekken. Denk groot en geloof dat er heel veel mogelijk is (omdenken). Als je maar probeert, spart en verbindt. Als kind wilde ik al Pippi Langkous zijn. Tegenwoordig nog steeds;)</p>
-                <p>Ik was dat kind dat als kleuter op de tafel mocht gaan staan om de rest m’n verzonnen verhaaltjes te vertellen. En die met een tamme kauw op het stuur naar school fietste. Al op zevenjarige leeftijd ging ik aardbeien plukken om van het verdiende geld extra doosjes kralen te kopen. Om mijn zelfgemaakte sieraden mooier te maken en te verkopen. Ik wilde altijd weg bij die saaie balletles en ging dan buiten spelen op het aangrenzende veldje met andere kinderen. M’n blokfluit was plotsklaps “verdwenen”; dat was zó niet mijn ding. Ook was ik dat kind dat steevast het recordbedrag voor Unicef bij elkaar kreeg. Door verdubbelde deals af te sluiten met mensen als ik een bepaalde afstand liep. Verder won ik de eerste prijs bij het maken van een kalenderblad voor de Rabobank van alle vijfdeklassers (gr.7) binnen de gemeente. Ha, ha, en dat terwijl ik een berisping had gekregen van m’n leerkracht omdat ik geen materialen vanuit het crealokaal gebruikte. Ik had alles zelf verzameld uit de natuur en ook met natuurlijke kleurstoffen geverfd. Ik realiseer me dat ik allesbehalve een schaap was. Eerder een vlegeltje maar geen brutale. Die daarbij meestal ook nog bijna iedereen voor zich innam.</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3"><span className={`w-2 h-2 rounded-full shrink-0 mt-2.5 ${prikkelArm ? 'bg-brand-aubergine/50' : 'bg-brand-orange'}`}></span><span>Ik was dat kind dat als kleuter op de tafel mocht gaan staan om de rest m’n verzonnen verhaaltjes te vertellen.</span></li>
+                  <li className="flex items-start gap-3"><span className={`w-2 h-2 rounded-full shrink-0 mt-2.5 ${prikkelArm ? 'bg-brand-aubergine/50' : 'bg-brand-orange'}`}></span><span>En die met een tamme kauw op het stuur naar school fietste.</span></li>
+                  <li className="flex items-start gap-3"><span className={`w-2 h-2 rounded-full shrink-0 mt-2.5 ${prikkelArm ? 'bg-brand-aubergine/50' : 'bg-brand-orange'}`}></span><span>En waarvan de blokfluit plotsklaps “verdwenen” was; dat was zó niet mijn ding…..</span></li>
+                  <li className="flex items-start gap-3"><span className={`w-2 h-2 rounded-full shrink-0 mt-2.5 ${prikkelArm ? 'bg-brand-aubergine/50' : 'bg-brand-orange'}`}></span><span>Steevast bedacht ik de themavieringen mee. Waarbij ik alles en iedereen bij betrok.</span></li>
+                </ul>
                 <p>Ik ben tientallen jaren werkzaam geweest in het onderwijs (BAO en SO in alle groepen). Prachtig werk, maar ik voelde steeds sterker: Ik heb méér te bieden dan binnen de lijntjes van een systeem past.</p>
                 <p>Ik wil de jeugd meenemen op het avontuur dat het leven heet. Niet volgens een standaard stappenplan, maar juist op een creatieve “out of the box” manier. Het moet BRUISEN. Waarbij ze zichzelf mogen laten zien en meer zichzelf mogen zijn. Want de jeugd is de toekomst. Wij kunnen er SAMEN voor zorgen dat dit een goede wordt!!!</p>
               </div>
@@ -1313,8 +1312,8 @@ Dit m.b.v. een reuzenpoppenkast en een xxl schimmenspelkast binnen 1 aula. Het z
 -uitvoeren workshops ( groep 4 t/m VO tweetalig vwo)
 -delegaties ontvangen en rondleidingen geven
 -de slotavond voor de vrijwilligers mede organiseren en presenteren. Een plek voor en met wereldburgers.`,
-                link: 'https://www.youtube.com/watch?v=aabupxac25k',
-                linkLabel: 'Bekijk de video'
+                link: 'https://wereldpaviljoen.com/',
+                linkLabel: 'Bekijk de website'
               }
             ].map((p, i) => (
               <div key={i} className={`gsap-reveal p-8 rounded-[2rem] border transition-lift flex flex-col justify-between ${prikkelArm ? 'bg-[#FAF8F5] border-brand-aubergine/10 text-brand-aubergine' : 'bg-[#FFFDF6] border-brand-orange/15 shadow-lg'}`}>
